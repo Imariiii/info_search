@@ -1,0 +1,15 @@
+{
+  "total_documents": 90740,
+  "total_text_size_bytes": 2152561026,
+  "total_text_size_kb": 2102110.376953125,
+  "total_text_size_mb": 2052.842164993286,
+  "total_text_length_chars": 1243275896,
+  "average_text_size_bytes": 23722.294754242892,
+  "average_text_length_chars": 13701.519682609654,
+  "execution_time_seconds": 644.3887257575989,
+  "execution_time_minutes": 10.739812095959982,
+  "documents_written": 90740,
+  "parser_used": "lxml",
+  "kb_per_second": 3262.1774604788484,
+  "docs_per_second": 140.81562319905308
+}

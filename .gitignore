@@ -1,0 +1,9 @@
+venv
+*.log
+corpus.txt
+corpus.txt.urls
+*.bin
+*.o
+*.out
+stemmed_tokens.txt
+tokens.txt

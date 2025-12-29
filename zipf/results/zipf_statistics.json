@@ -1,0 +1,10 @@
+{
+  "total_unique_tokens": 5403920,
+  "total_token_occurrences": 166573599,
+  "max_frequency": 5366277,
+  "min_frequency": 1,
+  "median_frequency": 1,
+  "zipf_exponent_fitted": 1.3437,
+  "zipf_constant_fitted": 483103690.21,
+  "execution_time_seconds": 78.91
+}

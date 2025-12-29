@@ -1,0 +1,55 @@
+db:
+  host: localhost
+  port: 27017
+  database: ir_corpus
+  collection: documents
+
+logic:
+  delay_between_pages: 0.5
+  recheck_interval: 604800
+  max_pages: 0
+  request_timeout: 30
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  num_threads: 10
+
+sources:
+  - source_name: "Википедия"
+    seed_urls:
+      - "https://ru.wikipedia.org/wiki/Классическая_музыка"
+      - "https://ru.wikipedia.org/wiki/Категория:Композиторы"
+      - "https://ru.wikipedia.org/wiki/Категория:Оперы"
+    include_patterns:
+      - "^https://ru\\.wikipedia\\.org/wiki/[^:]+$"
+    exclude_patterns:
+      - ".*#.*"
+      - ".*action=.*"
+      - ".*Special:.*"
+      - ".*Category:.*"
+
+  - source_name: "Culture.ru"
+    seed_urls:
+      - "https://www.culture.ru/"
+      - "https://www.culture.ru/museums"
+      - "https://www.culture.ru/music"
+      - "https://www.culture.ru/theaters"
+      - "https://www.culture.ru/news"
+      - "https://www.culture.ru/materials"
+    include_patterns:
+      - "^https://www\\.culture\\.ru.*"
+      - "^https://www\\.culture\\.ru/museums.*"
+      - "^https://www\\.culture\\.ru/music.*"
+      - "^https://www\\.culture\\.ru/theaters.*"
+      - "^https://www\\.culture\\.ru/news/.*"
+      - "^https://www\\.culture\\.ru/materials/.*"
+    exclude_patterns:
+      - ".*#.*"
+      - ".*\\.jpg$"
+      - ".*\\.png$"
+      - ".*/auth/.*"
+      - ".*/login.*"
+
+url_normalization:
+  remove_query_params: false 
+  remove_fragments: true
+  lowercase: true 
+  remove_trailing_slash: true
